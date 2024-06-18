@@ -22,15 +22,21 @@
            
             @auth
             
-              @if (Auth::user()->is_admin)
-               <li><a class="dropdown-item p-2" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
-              @endif
-              @if (Auth::user()->is_revisor)
-               <li><a class="dropdown-item p-2" href="{{route('revisor.dashboard')}}">Dashboard Revisor</a></li>
-              @endif
-              @if (Auth::user()->is_writer)
-               <li class="dropdown-item p-2"><a  href="{{route('writer.dashboard')}}">Dashboard Writer</a></li>
-              @endif
+            @if (Auth::user()->is_admin)
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard admin</a>
+            </li>
+            @endif
+            @if (Auth::user()->is_revisor)
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('revisor.dashboard') }}">Dashboard revisore</a>
+            </li>
+            @endif
+            @if (Auth::user()->is_writer)
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('writer.dashboard') }}">Dashboard redattore</a>
+            </li>
+            @endif
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Benvenuto {{Auth::user()->name}}
