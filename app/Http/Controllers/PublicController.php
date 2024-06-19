@@ -53,6 +53,7 @@ class PublicController extends Controller
         }
 
         $user->update();
-        return redirect(route('homepage'))->with('message', 'Mail inviata con successo!');
+
+        return redirect(route('homepage'))->with('message', 'Grazie per averci contattato!');
     }
 }

@@ -13,6 +13,6 @@
     <p>{{$info['message']}}</p>
     <form action="{{route('careers.submit')}}" method="POST" class="card p-5">
         @csrf
-    </form>
+    
 </body>
 </html>

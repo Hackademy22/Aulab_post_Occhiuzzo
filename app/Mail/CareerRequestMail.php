@@ -13,6 +13,8 @@ class CareerRequestMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $info;
+
     /**
      * Create a new message instance.
      */
